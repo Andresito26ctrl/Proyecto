@@ -1,303 +1,178 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TecnoPunto | Computadores e impresoras</title>
-  <meta name="description" content="Catálogo de computadores e impresoras: características, tipo, marca y compra simulada.">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Equipos Tecnológicos - Catálogo</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ============ ENCABEZADO ============ -->
-<header class="site-header">
-  <div class="container header-inner">
-    <a href="#inicio" class="logo" aria-label="TecnoPunto, ir al inicio">
-      <span class="img-box logo-box" data-label="Logo">
-        <img src="img/logo.png" alt="" onload="this.parentElement.classList.add('ok')" onerror="this.hidden=true">
-      </span>
-      <span class="logo-text">TecnoPunto</span>
-    </a>
-
-    <nav class="nav" aria-label="Principal">
-      <a href="#catalogo">Catálogo</a>
-      <a href="#tipos">Tipos de equipo</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#soporte">Soporte</a>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="nav-link fw-bold" href="index.html">TechStore - Inventario & Venta</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Catálogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#computadoras">Computadoras</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#impresoras">Impresoras</a></li>
+                    <li class="nav-item"><a class="nav-link btn-cart" href="carrito.html">🛒 Ver Carrito (<span id="cart-count">0</span>)</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <button class="cart-btn" id="btnCarrito" type="button" aria-label="Abrir carrito">
-      🛒 <span>Carrito</span> <span class="badge" id="cartCount">0</span>
-    </button>
-  </div>
-</header>
+    <header class="container mt-5 pt-4">
+        <h1 id="titulo-principal">Catálogo Tecnológico: Computadoras e Impresoras</h1>
+    </header>
 
-<main id="inicio">
+    <main class="container">
+        <!-- SECCIÓN COMPUTADORAS -->
+        <section id="computadoras" class="articulo">
+            <h2>Computadoras de Escritorio y Portátiles</h2>
+            <p class="parrafo-interes">Equipos corporativos optimizados para oficinas, consultorios y tareas de alto rendimiento con licencias Windows originales.</p>
 
-  <!-- ============ HERO ============ -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <p class="eyebrow">Computadores · Impresoras · Servicio técnico</p>
-        <h1>Todo para estudiar, imprimir y trabajar</h1>
-        <p class="lead">
-          Compara características, tipo y marca de cada equipo antes de comprar.
-          Esta tienda es una <strong>simulación</strong>: los precios son ficticios y no se cobra nada.
-        </p>
-        <a href="#catalogo" class="btn btn-primary">Ver catálogo</a>
-      </div>
-      <div class="img-box hero-img" data-label="Imagen: escritorio con computador e impresora">
-        <img src="img/hero.jpg" alt="Computador e impresora sobre un escritorio" onload="this.parentElement.classList.add('ok')" onerror="this.hidden=true">
-      </div>
-    </div>
-  </section>
+            <div class="row">
+                <!-- Tarjeta 1: AIO -->
+                <div class="col-md-6 mb-4">
+                    <div class="card p-3 h-100">
+                        <!-- IMAGEN: Coloca aquí una foto de un computador All-in-One HP (ej. 'aio_hp.jpg') -->
+                        <img src="https://via.placeholder.com/350x200?text=PC+All-in-One+HP" class="card-img-top imagen-producto" alt="PC Todo en Uno HP">
+                        <div class="card-body">
+                            <h3 class="card-title">HP All-in-One Pro (AIO)</h3>
+                            <ul class="lista-detalles">
+                                <li><strong>Tipo:</strong> Todo en Uno (All-in-One)</li>
+                                <li><strong>Marca:</strong> HP</li>
+                                <li><strong>Sistema Operativo:</strong> Windows 11 Pro</li>
+                                <li><strong>Procesador/Memoria:</strong> Intel Core i5 / 16 GB RAM</li>
+                                <li><strong>Almacenamiento:</strong> SSD 512 GB NVMe</li>
+                                <li><strong>Precio:</strong> $3.200.000 COP</li>
+                            </ul>
+                            <button class="btn btn-primary w-100 btn-add" 
+                                onclick="agregarAlCarrito('HP All-in-One Pro', 3200000, 'Computadora')">
+                                Añadir al Carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
-  <!-- ============ CATÁLOGO ============ -->
-  <section id="catalogo" class="section">
-    <div class="container">
-      <h2>Catálogo</h2>
+                <!-- Tarjeta 2: Portátil -->
+                <div class="col-md-6 mb-4">
+                    <div class="card p-3 h-100">
+                        <!-- IMAGEN: Coloca aquí una foto de un portátil HP/Lenovo corporativo (ej. 'laptop_portatil.jpg') -->
+                        <img src="https://via.placeholder.com/350x200?text=Laptop+Corporativa+HP" class="card-img-top imagen-producto" alt="Portátil Corporativo">
+                        <div class="card-body">
+                            <h3 class="card-title">Portátil HP ProBook</h3>
+                            <ul class="lista-detalles">
+                                <li><strong>Tipo:</strong> Portátil (Laptop)</li>
+                                <li><strong>Marca:</strong> HP</li>
+                                <li><strong>Sistema Operativo:</strong> Windows 11 Pro</li>
+                                <li><strong>Pantalla:</strong> 15.6" Full HD antirreflejo</li>
+                                <li><strong>Batería:</strong> Larga duración hasta 8 horas</li>
+                                <li><strong>Precio:</strong> $2.850.000 COP</li>
+                            </ul>
+                            <button class="btn btn-primary w-100 btn-add" 
+                                onclick="agregarAlCarrito('Portátil HP ProBook', 2850000, 'Computadora')">
+                                Añadir al Carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      <div class="filters" role="search">
-        <label class="field">Buscar
-          <input type="search" id="fBuscar" placeholder="Ej: ProBook, láser, 40 ppm">
-        </label>
-        <label class="field">Categoría
-          <select id="fCategoria">
-            <option value="todos">Todos</option>
-            <option value="computador">Computadores</option>
-            <option value="impresora">Impresoras</option>
-          </select>
-        </label>
-        <label class="field">Tipo
-          <select id="fTipo"><option value="todos">Todos</option></select>
-        </label>
-        <label class="field">Marca
-          <select id="fMarca"><option value="todos">Todas</option></select>
-        </label>
-        <label class="field">Ordenar por
-          <select id="fOrden">
-            <option value="destacado">Destacados</option>
-            <option value="precio-asc">Precio: menor a mayor</option>
-            <option value="precio-desc">Precio: mayor a menor</option>
-            <option value="nombre">Nombre A–Z</option>
-          </select>
-        </label>
-        <button class="btn btn-ghost" id="btnLimpiar" type="button">Limpiar filtros</button>
-      </div>
+        <!-- SECCIÓN IMPRESORAS -->
+        <section id="impresoras" class="articulo">
+            <h2>Impresoras Láser y Multifuncionales</h2>
+            <p class="parrafo-interes">Impresoras basadas en el equipamiento clínico institucional, con alta velocidad de impresión y compatibilidad de cartuchos estándar.</p>
 
-      <p class="result-count" id="contadorResultados" aria-live="polite"></p>
-      <div class="grid" id="gridProductos"></div>
-    </div>
-  </section>
+            <div class="row">
+                <!-- Tarjeta 1: HP Laser 408dn -->
+                <div class="col-md-4 mb-4">
+                    <div class="card p-3 h-100">
+                        <!-- IMAGEN: Coloca la imagen de la impresora HP Laser 408dn de Cirugía (ej. 'hp_408dn.jpg') -->
+                        <img src="https://via.placeholder.com/350x200?text=HP+Laser+408dn" class="card-img-top imagen-producto" alt="HP Laser 408dn">
+                        <div class="card-body">
+                            <h3 class="card-title">HP Laser 408dn</h3>
+                            <ul class="lista-detalles">
+                                <li><strong>Tipo:</strong> Láser Monocromática</li>
+                                <li><strong>Marca:</strong> HP (Ref. 7UQ75A)</li>
+                                <li><strong>Velocidad:</strong> 42 ppm (Carta)</li>
+                                <li><strong>Resolución:</strong> Hasta 1200 x 1200 dpi</li>
+                                <li><strong>Tóner:</strong> HP W1330A (5.000 páginas)</li>
+                                <li><strong>Precio:</strong> $1.450.000 COP</li>
+                            </ul>
+                            <button class="btn btn-primary w-100 btn-add" 
+                                onclick="agregarAlCarrito('HP Laser 408dn', 1450000, 'Impresora')">
+                                Añadir al Carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
-  <!-- ============ TIPOS DE EQUIPO ============ -->
-  <section id="tipos" class="section section-alt">
-    <div class="container">
-      <h2>¿Qué tipo de computador necesito?</h2>
-      <div class="cards-3">
-        <article class="info-card">
-          <div class="img-box" data-label="Imagen: computador All-in-One (AIO)">
-            <img src="img/tipo-aio.jpg" alt="Computador All-in-One" onload="this.parentElement.classList.add('ok')" onerror="this.hidden=true">
-          </div>
-          <h3>All-in-One (AIO)</h3>
-          <p>La pantalla y el computador vienen en una sola pieza. Ocupa poco espacio y casi no tiene cables. Ideal para recepción, oficina o una sala de estudio.</p>
-        </article>
-        <article class="info-card">
-          <div class="img-box" data-label="Imagen: computador de escritorio (CPU / torre)">
-            <img src="img/tipo-cpu.jpg" alt="Computador de escritorio tipo CPU" onload="this.parentElement.classList.add('ok')" onerror="this.hidden=true">
-          </div>
-          <h3>Escritorio (CPU)</h3>
-          <p>La caja va aparte del monitor. Es fácil de ampliar (RAM, disco) y de reparar. Buena opción para salas de cómputo y trabajo de todos los días.</p>
-        </article>
-        <article class="info-card">
-          <div class="img-box" data-label="Imagen: portátil">
-            <img src="img/tipo-portatil.jpg" alt="Computador portátil" onload="this.parentElement.classList.add('ok')" onerror="this.hidden=true">
-          </div>
-          <h3>Portátil</h3>
-          <p>Trae batería y lo llevas a clase, a la biblioteca o a la casa. Cuesta más que un escritorio con la misma potencia, pero te da libertad.</p>
-        </article>
-      </div>
-    </div>
-  </section>
+                <!-- Tarjeta 2: HP LaserJet Pro M501 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card p-3 h-100">
+                        <!-- IMAGEN: Coloca aquí una foto de la impresora HP M501 (ej. 'hp_m501.jpg') -->
+                        <img src="https://via.placeholder.com/350x200?text=HP+LaserJet+M501" class="card-img-top imagen-producto" alt="HP LaserJet Pro M501">
+                        <div class="card-body">
+                            <h3 class="card-title">HP LaserJet Pro M501dn</h3>
+                            <ul class="lista-detalles">
+                                <li><strong>Tipo:</strong> Láser Monocromática Alto Rendimiento</li>
+                                <li><strong>Marca:</strong> HP</li>
+                                <li><strong>Velocidad:</strong> Hasta 45 ppm</li>
+                                <li><strong>Tóner:</strong> CF287A / CBT-CF287A</li>
+                                <li><strong>Conexión:</strong> Tarjeta de Red Gigabit Ethernet</li>
+                                <li><strong>Precio:</strong> $2.100.000 COP</li>
+                            </ul>
+                            <button class="btn btn-primary w-100 btn-add" 
+                                onclick="agregarAlCarrito('HP LaserJet Pro M501dn', 2100000, 'Impresora')">
+                                Añadir al Carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
-  <!-- ============ SERVICIOS ============ -->
-  <section id="servicios" class="section">
-    <div class="container">
-      <h2>Servicios para tu impresora</h2>
-      <p class="lead-sm">Estos son los trabajos que más se repiten en el mantenimiento de impresoras láser. Cotización por WhatsApp o en el local (simulado).</p>
-      <div class="services-grid">
-        <article class="service-card">
-          <div class="img-box" data-label="Imagen: recarga de tóner">
-            <img src="img/servicio-toner.jpg" alt="Recarga de tóner" onload="this.parentElement.classList.add('ok')" onerror="this.hidden=true">
-          </div>
-          <h3>Recarga de tóner</h3>
-          <p>Volvemos a llenar el cartucho para que imprimas sin pagar uno nuevo.</p>
-        </article>
-        <article class="service-card">
-          <div class="img-box" data-label="Imagen: cambio de chip">
-            <img src="img/servicio-chip.jpg" alt="Cambio de chip del cartucho" onload="this.parentElement.classList.add('ok')" onerror="this.hidden=true">
-          </div>
-          <h3>Cambio de chip</h3>
-          <p>Si la impresora no reconoce el tóner o lo marca como agotado, muchas veces el problema es el chip.</p>
-        </article>
-        <article class="service-card">
-          <div class="img-box" data-label="Imagen: unidad de imagen (cilindro)">
-            <img src="img/servicio-unidad-imagen.jpg" alt="Cambio de unidad de imagen" onload="this.parentElement.classList.add('ok')" onerror="this.hidden=true">
-          </div>
-          <h3>Unidad de imagen (cilindro)</h3>
-          <p>Cambiamos la unidad de imagen cuando salen líneas, manchas o el fondo gris.</p>
-        </article>
-        <article class="service-card">
-          <div class="img-box" data-label="Imagen: mantenimiento preventivo">
-            <img src="img/servicio-mantenimiento.jpg" alt="Mantenimiento preventivo" onload="this.parentElement.classList.add('ok')" onerror="this.hidden=true">
-          </div>
-          <h3>Mantenimiento preventivo</h3>
-          <p>Limpieza y revisión de rodillos, fusor y bandejas antes de que aparezca la falla.</p>
-        </article>
-      </div>
-    </div>
-  </section>
+                <!-- Tarjeta 3: HP Laser MFP 432fdn -->
+                <div class="col-md-4 mb-4">
+                    <div class="card p-3 h-100">
+                        <!-- IMAGEN: Coloca aquí una foto de la multifuncional HP 432fdn (ej. 'hp_mfp432.jpg') -->
+                        <img src="https://via.placeholder.com/350x200?text=HP+Laser+MFP+432fdn" class="card-img-top imagen-producto" alt="HP Laser MFP 432fdn">
+                        <div class="card-body">
+                            <h3 class="card-title">HP Laser MFP 432fdn</h3>
+                            <ul class="lista-detalles">
+                                <li><strong>Tipo:</strong> Multifuncional (Copia, Escáner, Fax, Impresión)</li>
+                                <li><strong>Marca:</strong> HP</li>
+                                <li><strong>Velocidad:</strong> 42 ppm</li>
+                                <li><strong>Doble Cara:</strong> Automática (Dúplex)</li>
+                                <li><strong>Tóner:</strong> W1330 / W1330X</li>
+                                <li><strong>Precio:</strong> $2.600.000 COP</li>
+                            </ul>
+                            <button class="btn btn-primary w-100 btn-add" 
+                                onclick="agregarAlCarrito('HP Laser MFP 432fdn', 2600000, 'Impresora')">
+                                Añadir al Carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  <!-- ============ SOPORTE ============ -->
-  <section id="soporte" class="section section-alt">
-    <div class="container narrow">
-      <h2>Soporte: fallas comunes de impresión</h2>
+    <footer>
+        <p><strong>Simulador de Compras Tecnológicas</strong></p>
+        <p>Proyecto Escolar de Tecnología - 2026</p>
+    </footer>
 
-      <p class="callout"><strong>Seguridad primero:</strong> antes de meter la mano, apaga y desconecta la impresora. El fusor se calienta: espera a que se enfríe y no uses objetos metálicos para sacar el papel.</p>
-
-      <div class="faq">
-        <details>
-          <summary>Atasco de papel</summary>
-          <p><strong>Causas:</strong> papel doblado, húmedo o pegado; guías mal ajustadas; rodillos sucios o gastados.</p>
-          <p><strong>Qué hacer:</strong> saca el papel con cuidado y revisa bandejas, cubiertas, zona posterior y dúplex. Ajusta las guías y limpia los rodillos con un paño sin pelusa.</p>
-        </details>
-        <details>
-          <summary>No reconoce el tóner</summary>
-          <p><strong>Causas:</strong> cartucho mal instalado, contactos sucios, chip agotado o cartucho incompatible.</p>
-          <p><strong>Qué hacer:</strong> apaga, retira el cartucho, revisa protecciones y contactos, comprueba la compatibilidad y vuelve a instalarlo. Si sigue igual, prueba otro cartucho.</p>
-        </details>
-        <details>
-          <summary>Líneas verticales</summary>
-          <p><strong>Causas:</strong> cartucho, tambor, rodillos o fusor.</p>
-          <p><strong>Qué hacer:</strong> haz una impresión de prueba. Si la línea sale siempre en la misma posición, prueba otro cartucho y revisa la unidad de imagen.</p>
-        </details>
-        <details>
-          <summary>Puntos blancos o zonas sin imprimir</summary>
-          <p><strong>Causas:</strong> papel húmedo o de mala calidad, cartucho o unidad de imagen.</p>
-          <p><strong>Qué hacer:</strong> empieza por probar con papel nuevo y luego revisa el cartucho y la unidad de imagen.</p>
-        </details>
-        <details>
-          <summary>Toma varias hojas a la vez</summary>
-          <p><strong>Causas:</strong> papel húmedo o pegado, exceso de hojas o rodillo desgastado.</p>
-          <p><strong>Qué hacer:</strong> usa papel nuevo, no sobrecargues la bandeja y limpia o revisa los rodillos de alimentación.</p>
-        </details>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer class="site-footer">
-  <div class="container">
-    <p><strong>TecnoPunto</strong> · Proyecto académico. Los precios y la compra son una simulación: no se realiza ningún cobro ni envío real.</p>
-    <p class="small">Las especificaciones vienen de fichas de fabricantes (HP y Lenovo). Cada producto tiene su enlace de verificación en «Ver detalles».</p>
-  </div>
-</footer>
-
-<!-- ============ CAPAS (modales y carrito) ============ -->
-<div class="overlay" id="overlay" hidden></div>
-
-<!-- Detalle de producto -->
-<div class="modal" id="modalDetalle" role="dialog" aria-modal="true" aria-labelledby="detalleTitulo" hidden>
-  <button class="close" type="button" data-close aria-label="Cerrar">×</button>
-  <div class="detalle-grid">
-    <div id="detalleMedia"></div>
-    <div>
-      <p class="tag tag-soft" id="detalleTag"></p>
-      <h3 id="detalleTitulo"></h3>
-      <p id="detalleResumen"></p>
-      <p class="price" id="detallePrecio"></p>
-      <button class="btn btn-primary" id="detalleAgregar" type="button">Agregar al carrito</button>
-    </div>
-  </div>
-  <h4>Características</h4>
-  <table class="specs"><tbody id="detalleSpecs"></tbody></table>
-  <h4>Verifica los datos</h4>
-  <ul class="sources" id="detalleFuentes"></ul>
-</div>
-
-<!-- Carrito -->
-<aside class="drawer" id="drawer" aria-label="Carrito de compras" hidden>
-  <div class="drawer-head">
-    <h3>Tu carrito</h3>
-    <button class="close-inline" type="button" data-close aria-label="Cerrar carrito">×</button>
-  </div>
-  <div class="drawer-body" id="cartItems"></div>
-  <div class="drawer-foot">
-    <dl class="totals">
-      <div><dt>Subtotal</dt><dd id="cartSubtotal">$0</dd></div>
-      <div><dt>De los cuales IVA (19 %)</dt><dd id="cartIva">$0</dd></div>
-      <div><dt>Envío</dt><dd id="cartEnvio">$0</dd></div>
-      <div class="total"><dt>Total</dt><dd id="cartTotal">$0</dd></div>
-    </dl>
-    <button class="btn btn-primary btn-block" id="btnCheckout" type="button">Ir a pagar (simulado)</button>
-    <button class="btn btn-ghost btn-block" id="btnVaciar" type="button">Vaciar carrito</button>
-  </div>
-</aside>
-
-<!-- Checkout simulado -->
-<div class="modal modal-sm" id="modalCheckout" role="dialog" aria-modal="true" aria-labelledby="checkoutTitulo" hidden>
-  <button class="close" type="button" data-close aria-label="Cerrar">×</button>
-  <h3 id="checkoutTitulo">Finalizar compra (simulación)</h3>
-  <p class="warn">Esto es una simulación: no se cobra nada. No escribas datos bancarios reales.</p>
-
-  <form id="formCheckout" novalidate>
-    <div class="form-grid">
-      <label class="field full">Nombre completo
-        <input type="text" name="nombre" autocomplete="name">
-        <span class="error" data-error-for="nombre"></span>
-      </label>
-      <label class="field">Correo electrónico
-        <input type="email" name="correo" autocomplete="email">
-        <span class="error" data-error-for="correo"></span>
-      </label>
-      <label class="field">Teléfono
-        <input type="tel" name="telefono" autocomplete="tel">
-        <span class="error" data-error-for="telefono"></span>
-      </label>
-      <label class="field full">Dirección
-        <input type="text" name="direccion" autocomplete="street-address">
-        <span class="error" data-error-for="direccion"></span>
-      </label>
-      <label class="field">Ciudad
-        <input type="text" name="ciudad" autocomplete="address-level2">
-        <span class="error" data-error-for="ciudad"></span>
-      </label>
-      <label class="field">Método de pago
-        <select name="pago">
-          <option value="">Elige una opción</option>
-          <option value="tarjeta">Tarjeta débito/crédito (simulado)</option>
-          <option value="pse">PSE (simulado)</option>
-          <option value="contraentrega">Contra entrega (simulado)</option>
-        </select>
-        <span class="error" data-error-for="pago"></span>
-      </label>
-    </div>
-
-    <div class="summary" id="checkoutResumen"></div>
-    <button class="btn btn-primary btn-block" type="submit">Confirmar compra simulada</button>
-  </form>
-</div>
-
-<!-- Confirmación -->
-<div class="modal modal-sm" id="modalConfirmacion" role="dialog" aria-modal="true" aria-labelledby="confirmTitulo" hidden>
-  <button class="close" type="button" data-close aria-label="Cerrar">×</button>
-  <h3 id="confirmTitulo">¡Compra simulada exitosa! ✅</h3>
-  <div id="confirmContenido"></div>
-  <button class="btn btn-primary btn-block" type="button" data-close>Seguir comprando</button>
-</div>
-
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
-
-<script src="script.js"></script>
+    <!-- Bootstrap JS y Script Propio -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>

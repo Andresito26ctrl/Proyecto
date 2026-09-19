@@ -1,0 +1,140 @@
+:root {
+  --bg: #f5f7fb;
+  --surface: #ffffff;
+  --text: #1b2333;
+  --muted: #5b667a;
+  --primary: #0b6bcb;
+  --primary-dark: #084e97;
+  --accent: #12b886;
+  --border: #dfe5ef;
+  --danger: #d64545;
+  --radius: 14px;
+  --shadow: 0 6px 24px rgba(20, 35, 70, .08);
+  --shadow-lg: 0 20px 60px rgba(20, 35, 70, .28);
+}
+
+body {
+    font-family: Georgia, sans-serif; 
+    background-color: rgb(118, 194, 252);
+}
+
+#titulo-principal {
+    color: rgb(255, 255, 255);
+    background-color: rgb(8, 43, 242);  
+    padding: 20px;  
+    text-align: center;
+    margin-bottom: 20px;  
+    margin-top: 20px;
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;  
+}
+
+.navbar {
+    background-color: #00a4d2 !important;
+    border: 4px solid #000f5c; 
+    border-radius: 15px;
+    margin-bottom: 25px;
+    position: sticky; 
+    top: 2px; 
+    z-index: 1000; 
+}
+
+.nav-link {
+    font-size: 18px;
+    color: rgb(0, 0, 0) !important;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.4s ease; 
+}
+
+.nav-link:hover {
+    background-color: #6900cc !important;
+    color: #ffffff !important;
+}
+
+.btn-cart {
+    background-color: #ffca28;
+    color: #000 !important;
+    font-weight: bold;
+    border: 2px solid #b28900;
+}
+
+section.articulo {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 30px;
+    margin-top: 25px;
+    margin-bottom: 25px; 
+    border: 4px solid #0c10e7e2; 
+}
+
+h2 {
+    color: #6900cc;
+    border-bottom: 2px solid rgb(8, 43, 242);
+    padding-bottom: 5px;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+h3 {
+    color: rgba(24, 50, 197, 0.871);
+    font-size: 20px;
+}
+
+.parrafo-interes {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.imagen-producto {
+    border-radius: 10px;
+    border: 3px solid #00a4d2;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.lista-detalles {
+    list-style: none;
+    padding-left: 0;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.lista-detalles li strong {
+    color: #082bf2;
+}
+
+table {
+    width: 100%;
+    margin-top: 15px;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 2px solid #0f9dd0;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #00b7c1;
+    color: #000000;
+}
+
+footer {
+    background-color: #48d7ff; 
+    padding: 40px;
+    text-align: center;
+    border-radius: 25px;
+    margin-top: 30px;
+    border: 4px solid #0c10e7e2; 
+}
+
+footer p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #0c0642;
+}
