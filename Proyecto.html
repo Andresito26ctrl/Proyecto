@@ -21,8 +21,25 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="Proyecto.html">Catálogo</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#computadoras">Computadoras</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#impresoras">Impresoras</a></li>
+                    <li class="nav-item dropdown-personalizado"><a class="nav-link" href="#computadoras">Computadoras</a>
+                    <!-- Submenú que se desplegará -->
+                        <ul class="submenu">
+                            <li><a href="#hp-all-in-one-pro">HP All-in-One Pro</a></li>
+                            <li><a href="#hp-probook">Portátil HP ProBook</a></li>
+                            <li><a href="#hp-gaming-omen">Portátil HP Gaming OMEN</a></li>
+                            <li><a href="#hp-zbook-firefly">Portátil HP ZBook Firefly 14 G8</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown-personalizado"><a class="nav-link" href="#impresoras">Impresoras</a>
+                    <!-- Submenú que se desplegará -->
+                        <ul class="submenu">
+                            <li><a href="#hp-laser-408dn">HP Laser 408dn</a></li>
+                            <li><a href="#hp-laserjet-pro-m501">HP LaserJet Pro M501</a></li>
+                            <li><a href="#hp-laser-mfp-432fdn">HP Laser MFP 432fdn</a></li>
+                            <li><a href="#hp-laserjet-pro-m402n">HP LaserJet Pro M402n</a></li>
+                            <li><a href="#samsung-scx-3405w">Samsung SCX-3405W</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item"><a class="nav-link btn-cart" href="carrito.html">🛒 Ver Carrito (<span id="cart-count">0</span>)</a></li>
                 </ul>
             </div>
@@ -41,7 +58,7 @@
 
             <div class="row">
                 <!-- Tarjeta 1: AIO -->
-                <div class="col-md-6 mb-4">
+                <div class="col-md-6 mb-4" id="hp-all-in-one-pro">
                     <div class="card p-3 h-100">
                         <img src="https://co-media.hptiendaenlinea.com/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/7/7/77V88LA-2_T1692382596.png" class="card-img-top imagen-producto" alt="PC Todo en Uno HP" width="20">
                         <div class="card-body">
@@ -64,7 +81,7 @@
 
                 <!-- Tarjeta 2: Portátil HP ProBook -->
                 <div class="col-md-6 mb-4">
-                    <div class="card p-3 h-100">
+                    <div class="card p-3 h-100" id="hp-probook">
                         <img src="https://co-media.hptiendaenlinea.com/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/6/C/6C5X8LT-1_T1692811801.png" class="card-img-top imagen-producto" alt="Portátil Corporativo">
                         <div class="card-body">
                             <h3 class="card-title">Portátil HP ProBook</h3>
@@ -86,7 +103,7 @@
 
                 <!-- Tarjeta 3: Portátil HP Gaming OMEN Transcend 14-fb0001la -->
                 <div class="col-md-6 mb-4">
-                    <div class="card p-3 h-100">
+                    <div class="card p-3 h-100" id="hp-gaming-omen">
                         <img src="https://co-media.hptiendaenlinea.com/catalog/product/cache/74c1057f7991b4edb2bc7bdaa94de933/a/z/azure_a0dh6la_2imagenprincipalsintexto.jpg" class="card-img-top imagen-producto" alt="Portátil Corporativo">
                         <div class="card-body">
                             <h3 class="card-title">Portátil HP Gaming OMEN</h3>
@@ -112,7 +129,7 @@
 
                                 <!-- Tarjeta 4: Portátil HP Zbook Firefly 14 G8-->
                 <div class="col-md-6 mb-4">
-                    <div class="card p-3 h-100">
+                    <div class="card p-3 h-100" id="hp-zbook-firefly">
                         <img src="https://www.hp.com/content/dam/sites/worldwide/tech-takes/co-es/laptops/los-mejores/mejores-portatiles-hp-para-estudiar/HP_Zbook_Firefly_14_G8_1.png" class="card-img-top imagen-producto" alt="Portátil HP ZBook Firefly 14 G8">
                         <div class="card-body">
                             <h3 class="card-title">Portátil HP ZBook Firefly 14 G8</h3>
@@ -146,7 +163,7 @@
             <div class="row">
                 <!-- Tarjeta 1: HP Laser 408dn -->
                 <div class="col-md-4 mb-4">
-                    <div class="card p-3 h-100">
+                    <div class="card p-3 h-100" id="hp-laser-408dn">
                         <img src="https://impresoras.com.co/wp-content/uploads/2023/05/Impresora-HP-Laser-408dn-Inicio-II-impresoras.com_.co_.jpg" class="card-img-top imagen-producto" alt="HP Laser 408dn">
                         <div class="card-body">
                             <h3 class="card-title">HP Laser 408dn</h3>
@@ -169,7 +186,7 @@
 
                 <!-- Tarjeta 2: HP LaserJet Pro M501 -->
                 <div class="col-md-4 mb-4">
-                    <div class="card p-3 h-100">
+                    <div class="card p-3 h-100" id="hp-laserjet-pro-m501">
                         <img src="https://compuimpresion.com.co/portal/wp-content/uploads/2021/12/Impresora-Hp-laserjet-enterprise-M501dn-Monocromatica-compuimpresion-3.jpg" class="card-img-top imagen-producto" alt="HP LaserJet Pro M501">
                         <div class="card-body">
                             <h3 class="card-title">HP LaserJet Pro M501dn</h3>
@@ -192,7 +209,7 @@
 
                 <!-- Tarjeta 3: HP Laser MFP 432fdn -->
                 <div class="col-md-4 mb-4">
-                    <div class="card p-3 h-100">
+                    <div class="card p-3 h-100" id="hp-laser-mfp-432fdn">
                         <img src="https://http2.mlstatic.com/D_NQ_NP_907653-MCO75759607164_042024-O.webp" class="card-img-top imagen-producto" alt="HP Laser MFP 432fdn">
                         <div class="card-body">
                             <h3 class="card-title">HP Laser MFP 432fdn</h3>
@@ -214,8 +231,8 @@
                 </div>
 
                 <!-- Tarjeta 4: HP LaserJet Pro M402n -->
-                <div class="col-md-4 mb-4">
-                    <div class="card p-3 h-100">
+                <div class="col-md-4 mb-4" >
+                    <div class="card p-3 h-100" id="hp-laserjet-pro-m402n">
                         <img src="https://http2.mlstatic.com/D_NQ_NP_765164-CBT82403929844_022025-O.webp" class="card-img-top imagen-producto" alt="HP LaserJet Pro M402n">
                         <div class="card-body">
                             <h3 class="card-title">HP LaserJet Pro M402n</h3>
@@ -238,7 +255,7 @@
 
                 <!-- Tarjeta 5: Samsung SCX-3405W -->
                 <div class="col-md-4 mb-4">
-                    <div class="card p-3 h-100">
+                    <div class="card p-3 h-100" id="samsung-scx-3405w">
                         <img src="https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c05837368.png" class="card-img-top imagen-producto" alt="Samsung SCX-3405W">
                         <div class="card-body">
                             <h3 class="card-title">Samsung SCX-3405W</h3>

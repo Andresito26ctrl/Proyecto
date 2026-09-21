@@ -35,7 +35,7 @@ body {
     border-radius: 15px;
     margin-bottom: 25px;
     position: sticky; 
-    top: 2px; 
+    top:1%; 
     z-index: 1000; 
 }
 
@@ -51,6 +51,62 @@ body {
 .nav-link:hover {
     background-color: #cc7400 !important;
     color: #fffafa !important;
+}
+
+.dropdown-personalizado 
+{
+    position: relative;
+}
+
+.dropdown-personalizado:hover .submenu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.submenu {
+    position: static;
+    display: none;
+    top: 100%;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+    background-color: #f0aa46; 
+    border: 2px solid #85784d; 
+    border-radius: 10px;
+}
+
+.submenu a {
+    display: block;
+    padding: 10px 15px;
+    color: #000000 !important;
+    text-decoration: none;
+}
+
+.submenu a:hover {
+    background-color: #cc7400 !important;
+    color: #fffafa !important;
+    transition: background-color 0.5s ease;
+}
+
+@media (min-width: 992px) {
+    .submenu {
+        position: absolute; 
+        top: 100%;
+        left: 0;
+        opacity: 0;
+        visibility: hidden;
+        display: block;  
+        transition: opacity 0.4s ease, visibility 0.4s ease;
+        border: 2px solid #85784d;
+        min-width: 240px;
+        z-index: 1000;
+    }
+    .dropdown-personalizado:hover .submenu {
+            opacity: 1;
+            visibility: visible;
+        } 
 }
 
 .btn-cart {
@@ -88,9 +144,12 @@ h3 {
 }
 
 .imagen-producto {
+    text-align: center;
     border-radius: 10px;
     border: 3px solid  #85784d; 
     object-fit: cover;
+    height: 45%;
+    width: 90%;
     margin-bottom: 15px;
 }
 
