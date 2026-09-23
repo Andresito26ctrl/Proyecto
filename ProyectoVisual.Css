@@ -201,3 +201,32 @@ footer p {
     margin: 5px 0;
     color: #0c0642;
 }
+
+/* Submenu de Computadores y Impresoras */
+ul.submenu, ul.submenu-nivel2 {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* position relative a la derecha  */
+.dropdown-subitem {
+    position: relative;
+}
+
+/* Ocultar el submenú  */
+.submenu-nivel2 {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 90%; 
+    min-width: 190px; 
+    background-color: #f1a942; 
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+/* Mostrar el submenú */
+.dropdown-subitem:hover > .submenu-nivel2 {
+    display: block;
+}
