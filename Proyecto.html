@@ -4,60 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda de Equipos Tecnológicos - Catálogo</title>
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="ProyectoVisual.Css">
-    <!-- Lógica -->
+    <link rel="stylesheet" href="ProyectoVisual.css">
     <script src="LogicaProyecto.js" defer></script>    
 </head>
 <body>
-
-    <!-- Barra de navegación -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
+            <img src="Logo de TechStore.png" alt="Logo TechStore" height="40" class="me-2">
             <a class="nav-link fw-bold" href="Proyecto.html">TechStore - Inventario & Venta</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item dropdown-personalizado">
-    <a class="nav-link active" href="Proyecto.html">Catálogo</a>
-    
-                            <!-- Submenú de Primer Nivel: Categorías principales -->
-                            <ul class="submenu">
-                                
-                                <!-- Catalogo 1: Computadoras -->
-                                <li class="dropdown-subitem">
-                                    <a href="#computadoras">Computadoras &raquo;</a>
-                                    
-                                    <!-- Submenú de Segundo Nivel: Equipos de Computo -->
-                                    <ul class="submenu-nivel2">
-                                        <li><a href="#hp-all-in-one-pro">HP All-in-One Pro</a></li>
-                                        <li><a href="#hp-probook">Portátil HP ProBook</a></li>
-                                        <li><a href="#hp-gaming-omen">Portátil HP Gaming OMEN</a></li>
-                                        <li><a href="#hp-zbook-firefly">Portátil HP ZBook Firefly 14 G8</a></li>
-                                    </ul>
-                                </li>
-
-                                <!-- catalogo 2: Impresoras -->
-                                <li class="dropdown-subitem">
-                                    <a href="#impresoras">Impresoras &raquo;</a>
-                                    
-                                    <!-- Submenú de Segundo Nivel: Modelos de Impresoras -->
-                                    <ul class="submenu-nivel2">
-                                        <li><a href="#hp-laser-408dn">HP Laser 408dn</a></li>
-                                        <li><a href="#hp-laserjet-pro-m501">HP LaserJet Pro M501</a></li>
-                                        <li><a href="#hp-laser-mfp-432fdn">HP Laser MFP 432fdn</a></li>
-                                        <li><a href="#hp-laserjet-pro-m402n">HP LaserJet Pro M402n</a></li>
-                                        <li><a href="#samsung-scx-3405w">Samsung SCX-3405W</a></li>
-                                    </ul>
-                                </li>
-
-                            </ul>
-                        </li>
-                    <li class="nav-item"><a class="nav-link btn-cart" href="carrito.html">🛒 Ver Carrito (<span id="cart-count">0</span>)</a></li>
+                    <li class="nav-item menu-desplegable-contenedor">
+                        <a class="nav-link active" href="Proyecto.html">Catálogo</a>
+                        <ul class="sub-menu-categorias">
+                            <li class="sub-menu-item-categoria">
+                                <a href="#computadoras">Computadoras &raquo;</a>
+                                <ul class="sub-menu-productos">
+                                    <li><a href="#hp-all-in-one-pro">HP All-in-One Pro</a></li>
+                                    <li><a href="#hp-probook">Portátil HP ProBook</a></li>
+                                    <li><a href="#hp-gaming-omen">Portátil HP Gaming OMEN</a></li>
+                                    <li><a href="#hp-zbook-firefly">Portátil HP ZBook Firefly 14 G8</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-menu-item-categoria">
+                                <a href="#impresoras">Impresoras &raquo;</a>
+                                <ul class="sub-menu-productos">
+                                    <li><a href="#hp-laser-408dn">HP Laser 408dn</a></li>
+                                    <li><a href="#hp-laserjet-pro-m501">HP LaserJet Pro M501</a></li>
+                                    <li><a href="#hp-laser-mfp-432fdn">HP Laser MFP 432fdn</a></li>
+                                    <li><a href="#hp-laserjet-pro-m402n">HP LaserJet Pro M402n</a></li>
+                                    <li><a href="#samsung-scx-3405w">Samsung SCX-3405W</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link boton-ver-carrito" href="Carrito.html">🛒 Ver Carrito (<span id="cart-count">0</span>)</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -69,18 +56,18 @@
 
     <main class="container">
         <!-- SECCIÓN COMPUTADORAS -->
-        <section id="computadoras" class="articulo">
+        <section id="computadoras" class="seccion-tarjeta">
             <h2>Computadoras de Escritorio y Portátiles</h2>
-            <p class="parrafo-interes">Equipos corporativos optimizados para oficinas, consultorios y tareas de alto rendimiento con licencias Windows originales.</p>
+            <p class="descripcion-seccion">Equipos corporativos optimizados para oficinas, consultorios y tareas de alto rendimiento con licencias Windows originales.</p>
 
             <div class="row">
                 <!-- Tarjeta 1: AIO -->
                 <div class="col-md-6 mb-4" id="hp-all-in-one-pro">
                     <div class="card p-3 h-100">
-                        <img src="https://co-media.hptiendaenlinea.com/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/7/7/77V88LA-2_T1692382596.png" class="card-img-top imagen-producto" alt="PC Todo en Uno HP" width="20">
+                        <img src="https://co-media.hptiendaenlinea.com/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/7/7/77V88LA-2_T1692382596.png" class="card-img-top imagen-tarjeta-producto" alt="PC Todo en Uno HP">
                         <div class="card-body">
                             <h3 class="card-title">HP All-in-One Pro (AIO)</h3>
-                            <ul class="lista-detalles">
+                            <ul class="lista-especificaciones">
                                 <li><strong>Tipo:</strong> Todo en Uno (All-in-One)</li>
                                 <li><strong>Marca:</strong> HP</li>
                                 <li><strong>Sistema Operativo:</strong> Windows 11 Pro</li>
@@ -88,7 +75,7 @@
                                 <li><strong>Almacenamiento:</strong> SSD 512 GB NVMe</li>
                                 <li><strong>Precio:</strong> $3.200.000 COP</li>
                             </ul>
-                            <button class="btn btn-primary w-100 btn-add" 
+                            <button class="btn btn-primary w-100 boton-agregar-carrito" 
                                 onclick="agregarAlCarrito('HP All-in-One Pro', 3200000, 'Computadora')">
                                 Añadir al Carrito
                             </button>
@@ -97,12 +84,12 @@
                 </div>
 
                 <!-- Tarjeta 2: Portátil HP ProBook -->
-                <div class="col-md-6 mb-4">
-                    <div class="card p-3 h-100" id="hp-probook">
-                        <img src="https://co-media.hptiendaenlinea.com/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/6/C/6C5X8LT-1_T1692811801.png" class="card-img-top imagen-producto" alt="Portátil Corporativo">
+                <div class="col-md-6 mb-4" id="hp-probook">
+                    <div class="card p-3 h-100">
+                        <img src="https://co-media.hptiendaenlinea.com/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/6/C/6C5X8LT-1_T1692811801.png" class="card-img-top imagen-tarjeta-producto" alt="Portátil Corporativo">
                         <div class="card-body">
                             <h3 class="card-title">Portátil HP ProBook</h3>
-                            <ul class="lista-detalles">
+                            <ul class="lista-especificaciones">
                                 <li><strong>Tipo:</strong> Portátil (Laptop)</li>
                                 <li><strong>Marca:</strong> HP</li>
                                 <li><strong>Sistema Operativo:</strong> Windows 11 Pro</li>
@@ -110,7 +97,7 @@
                                 <li><strong>Batería:</strong> Larga duración hasta 8 horas</li>
                                 <li><strong>Precio:</strong> $2.850.000 COP</li>
                             </ul>
-                            <button class="btn btn-primary w-100 btn-add" 
+                            <button class="btn btn-primary w-100 boton-agregar-carrito" 
                                 onclick="agregarAlCarrito('Portátil HP ProBook', 2850000, 'Computadora')">
                                 Añadir al Carrito
                             </button>
@@ -118,13 +105,13 @@
                     </div>
                 </div>
 
-                <!-- Tarjeta 3: Portátil HP Gaming OMEN Transcend 14-fb0001la -->
-                <div class="col-md-6 mb-4">
-                    <div class="card p-3 h-100" id="hp-gaming-omen">
-                        <img src="https://co-media.hptiendaenlinea.com/catalog/product/cache/74c1057f7991b4edb2bc7bdaa94de933/a/z/azure_a0dh6la_2imagenprincipalsintexto.jpg" class="card-img-top imagen-producto" alt="Portátil Corporativo">
+                <!-- Tarjeta 3: Portátil HP Gaming OMEN -->
+                <div class="col-md-6 mb-4" id="hp-gaming-omen">
+                    <div class="card p-3 h-100">
+                        <img src="https://co-media.hptiendaenlinea.com/catalog/product/cache/74c1057f7991b4edb2bc7bdaa94de933/a/z/azure_a0dh6la_2imagenprincipalsintexto.jpg" class="card-img-top imagen-tarjeta-producto" alt="Portátil Corporativo">
                         <div class="card-body">
                             <h3 class="card-title">Portátil HP Gaming OMEN</h3>
-                            <ul class="lista-detalles">
+                            <ul class="lista-especificaciones">
                                 <li><strong>Tipo:</strong> Portátil Gamer (Laptop)</li>
                                 <li><strong>Marca:</strong> HP (OMEN Transcend 14-fb0001la)</li>
                                 <li><strong>Procesador:</strong> Intel® Core™ Ultra 7 155H</li>
@@ -136,7 +123,7 @@
                                 <li><strong>Batería:</strong> 71 Wh (6 celdas, hasta 8 horas)</li>
                                 <li><strong>Precio:</strong> $12.299.070 COP</li>
                             </ul>
-                            <button class="btn btn-primary w-100 btn-add" 
+                            <button class="btn btn-primary w-100 boton-agregar-carrito" 
                                 onclick="agregarAlCarrito('Portátil HP Gaming OMEN', 12299070, 'Computadora')">
                                 Añadir al Carrito
                             </button>
@@ -144,13 +131,13 @@
                     </div>
                 </div>
 
-                                <!-- Tarjeta 4: Portátil HP Zbook Firefly 14 G8-->
-                <div class="col-md-6 mb-4">
-                    <div class="card p-3 h-100" id="hp-zbook-firefly">
-                        <img src="https://www.hp.com/content/dam/sites/worldwide/tech-takes/co-es/laptops/los-mejores/mejores-portatiles-hp-para-estudiar/HP_Zbook_Firefly_14_G8_1.png" class="card-img-top imagen-producto" alt="Portátil HP ZBook Firefly 14 G8">
+                <!-- Tarjeta 4: Portátil HP ZBook Firefly -->
+                <div class="col-md-6 mb-4" id="hp-zbook-firefly">
+                    <div class="card p-3 h-100">
+                        <img src="https://www.hp.com/content/dam/sites/worldwide/tech-takes/co-es/laptops/los-mejores/mejores-portatiles-hp-para-estudiar/HP_Zbook_Firefly_14_G8_1.png" class="card-img-top imagen-tarjeta-producto" alt="Portátil HP ZBook Firefly 14 G8">
                         <div class="card-body">
                             <h3 class="card-title">Portátil HP ZBook Firefly 14 G8</h3>
-                            <ul class="lista-detalles">
+                            <ul class="lista-especificaciones">
                                 <li><strong>Tipo:</strong> Workstation Móvil (Portátil Corporativo)</li>
                                 <li><strong>Marca:</strong> HP (ZBook Firefly 14 G8)</li>
                                 <li><strong>Procesador:</strong> Intel® Core™ i7-1165G7 (hasta 4.7 GHz, 4 núcleos, 8 hilos)</li>
@@ -162,7 +149,7 @@
                                 <li><strong>Batería:</strong> 53 Wh (3 celdas, larga duración HP)</li>
                                 <li><strong>Precio:</strong> $4.394.577 COP</li>
                             </ul>
-                            <button class="btn btn-primary w-100 btn-add" 
+                            <button class="btn btn-primary w-100 boton-agregar-carrito" 
                                 onclick="agregarAlCarrito('Portátil HP ZBook Firefly 14 G8', 4394577, 'Computadora')">
                                 Añadir al Carrito
                             </button>
@@ -173,27 +160,27 @@
         </section>
 
         <!-- SECCIÓN IMPRESORAS -->
-        <section id="impresoras" class="articulo">
+        <section id="impresoras" class="seccion-tarjeta">
             <h2>Impresoras Láser y Multifuncionales</h2>
-            <p class="parrafo-interes">Impresoras basadas en el equipamiento clínico institucional, con alta velocidad de impresión y compatibilidad de cartuchos estándar.</p>
+            <p class="descripcion-seccion">Impresoras basadas en el equipamiento clínico institucional, con alta velocidad de impresión y compatibilidad de cartuchos estándar.</p>
 
             <div class="row">
                 <!-- Tarjeta 1: HP Laser 408dn -->
-                <div class="col-md-4 mb-4">
-                    <div class="card p-3 h-100" id="hp-laser-408dn">
-                        <img src="https://impresoras.com.co/wp-content/uploads/2023/05/Impresora-HP-Laser-408dn-Inicio-II-impresoras.com_.co_.jpg" class="card-img-top imagen-producto" alt="HP Laser 408dn">
+                <div class="col-md-4 mb-4" id="hp-laser-408dn">
+                    <div class="card p-3 h-100">
+                        <img src="https://impresoras.com.co/wp-content/uploads/2023/05/Impresora-HP-Laser-408dn-Inicio-II-impresoras.com_.co_.jpg" class="card-img-top imagen-tarjeta-producto" alt="HP Laser 408dn">
                         <div class="card-body">
                             <h3 class="card-title">HP Laser 408dn</h3>
-                            <ul class="lista-detalles">
+                            <ul class="lista-especificaciones">
                                 <li><strong>Tipo:</strong> Láser Monocromática</li>
                                 <li><strong>Marca:</strong> HP (Ref. 7UQ75A)</li>
                                 <li><strong>Velocidad:</strong> 42 ppm (Carta)</li>
-                                <li><strong>Serial</strong> CNB1S720Y4</li>
+                                <li><strong>Serial:</strong> CNB1S720Y4</li>
                                 <li><strong>Resolución:</strong> Hasta 1200 x 1200 dpi</li>
                                 <li><strong>Tóner:</strong> HP W1330A (5.000 páginas)</li>
                                 <li><strong>Precio:</strong> $1.450.000 COP</li>
                             </ul>
-                            <button class="btn btn-primary w-100 btn-add" 
+                            <button class="btn btn-primary w-100 boton-agregar-carrito" 
                                 onclick="agregarAlCarrito('HP Laser 408dn', 1450000, 'Impresora')">
                                 Añadir al Carrito
                             </button>
@@ -202,21 +189,21 @@
                 </div>
 
                 <!-- Tarjeta 2: HP LaserJet Pro M501 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card p-3 h-100" id="hp-laserjet-pro-m501">
-                        <img src="https://compuimpresion.com.co/portal/wp-content/uploads/2021/12/Impresora-Hp-laserjet-enterprise-M501dn-Monocromatica-compuimpresion-3.jpg" class="card-img-top imagen-producto" alt="HP LaserJet Pro M501">
+                <div class="col-md-4 mb-4" id="hp-laserjet-pro-m501">
+                    <div class="card p-3 h-100">
+                        <img src="https://compuimpresion.com.co/portal/wp-content/uploads/2021/12/Impresora-Hp-laserjet-enterprise-M501dn-Monocromatica-compuimpresion-3.jpg" class="card-img-top imagen-tarjeta-producto" alt="HP LaserJet Pro M501">
                         <div class="card-body">
                             <h3 class="card-title">HP LaserJet Pro M501dn</h3>
-                            <ul class="lista-detalles">
+                            <ul class="lista-especificaciones">
                                 <li><strong>Tipo:</strong> Láser Monocromática Alto Rendimiento</li>
                                 <li><strong>Marca:</strong> HP</li>
                                 <li><strong>Velocidad:</strong> Hasta 45 ppm</li>
-                                <li><strong>Serial</strong> JPCC10PQS6</li>
+                                <li><strong>Serial:</strong> JPCC10PQS6</li>
                                 <li><strong>Tóner:</strong> CF287A / CBT-CF287A</li>
                                 <li><strong>Conexión:</strong> Tarjeta de Red Gigabit Ethernet</li>
                                 <li><strong>Precio:</strong> $2.100.000 COP</li>
                             </ul>
-                            <button class="btn btn-primary w-100 btn-add" 
+                            <button class="btn btn-primary w-100 boton-agregar-carrito" 
                                 onclick="agregarAlCarrito('HP LaserJet Pro M501dn', 2100000, 'Impresora')">
                                 Añadir al Carrito
                             </button>
@@ -225,21 +212,21 @@
                 </div>
 
                 <!-- Tarjeta 3: HP Laser MFP 432fdn -->
-                <div class="col-md-4 mb-4">
-                    <div class="card p-3 h-100" id="hp-laser-mfp-432fdn">
-                        <img src="https://http2.mlstatic.com/D_NQ_NP_907653-MCO75759607164_042024-O.webp" class="card-img-top imagen-producto" alt="HP Laser MFP 432fdn">
+                <div class="col-md-4 mb-4" id="hp-laser-mfp-432fdn">
+                    <div class="card p-3 h-100">
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_907653-MCO75759607164_042024-O.webp" class="card-img-top imagen-tarjeta-producto" alt="HP Laser MFP 432fdn">
                         <div class="card-body">
                             <h3 class="card-title">HP Laser MFP 432fdn</h3>
-                            <ul class="lista-detalles">
+                            <ul class="lista-especificaciones">
                                 <li><strong>Tipo:</strong> Multifuncional (Copia, Escáner, Fax, Impresión)</li>
                                 <li><strong>Marca:</strong> HP</li>
                                 <li><strong>Velocidad:</strong> 42 ppm</li>
-                                <li><strong>Serial</strong> CNB1TC4B6H</li>
+                                <li><strong>Serial:</strong> CNB1TC4B6H</li>
                                 <li><strong>Doble Cara:</strong> Automática (Dúplex)</li>
                                 <li><strong>Tóner:</strong> W1330 / W1330X</li>
                                 <li><strong>Precio:</strong> $2.600.000 COP</li>
                             </ul>
-                            <button class="btn btn-primary w-100 btn-add" 
+                            <button class="btn btn-primary w-100 boton-agregar-carrito" 
                                 onclick="agregarAlCarrito('HP Laser MFP 432fdn', 2600000, 'Impresora')">
                                 Añadir al Carrito
                             </button>
@@ -248,12 +235,12 @@
                 </div>
 
                 <!-- Tarjeta 4: HP LaserJet Pro M402n -->
-                <div class="col-md-4 mb-4" >
-                    <div class="card p-3 h-100" id="hp-laserjet-pro-m402n">
-                        <img src="https://http2.mlstatic.com/D_NQ_NP_765164-CBT82403929844_022025-O.webp" class="card-img-top imagen-producto" alt="HP LaserJet Pro M402n">
+                <div class="col-md-4 mb-4" id="hp-laserjet-pro-m402n">
+                    <div class="card p-3 h-100">
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_765164-CBT82403929844_022025-O.webp" class="card-img-top imagen-tarjeta-producto" alt="HP LaserJet Pro M402n">
                         <div class="card-body">
                             <h3 class="card-title">HP LaserJet Pro M402n</h3>
-                            <ul class="lista-detalles">
+                            <ul class="lista-especificaciones">
                                 <li><strong>Tipo:</strong> Láser Monocromática para Oficina / Negocio</li>
                                 <li><strong>Marca:</strong> HP</li>
                                 <li><strong>Velocidad:</strong> Hasta 40 ppm (carta) / 38 ppm (A4)</li>
@@ -262,7 +249,7 @@
                                 <li><strong>Conexión:</strong> Red Gigabit Ethernet 10/100/1000T + USB 2.0</li>
                                 <li><strong>Precio:</strong> $1.450.000 COP</li>
                             </ul>
-                            <button class="btn btn-primary w-100 btn-add" 
+                            <button class="btn btn-primary w-100 boton-agregar-carrito" 
                                 onclick="agregarAlCarrito('HP LaserJet Pro M402n', 1450000, 'Impresora')">
                                 Añadir al Carrito
                             </button>
@@ -271,21 +258,21 @@
                 </div>
 
                 <!-- Tarjeta 5: Samsung SCX-3405W -->
-                <div class="col-md-4 mb-4">
-                    <div class="card p-3 h-100" id="samsung-scx-3405w">
-                        <img src="https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c05837368.png" class="card-img-top imagen-producto" alt="Samsung SCX-3405W">
+                <div class="col-md-4 mb-4" id="samsung-scx-3405w">
+                    <div class="card p-3 h-100">
+                        <img src="https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c05837368.png" class="card-img-top imagen-tarjeta-producto" alt="Samsung SCX-3405W">
                         <div class="card-body">
                             <h3 class="card-title">Samsung SCX-3405W</h3>
-                            <ul class="lista-detalles">
-                                <li><strong>Tipo:</strong> Multifuncional Láser Monocromática (Imprime, Copia, Escanea)</li>
+                            <ul class="lista-especificaciones">
+                                <li><strong>Tipo:</strong> Multifuncional Láser Monocromática</li>
                                 <li><strong>Marca:</strong> Samsung</li>
                                 <li><strong>Velocidad:</strong> Hasta 20 ppm (A4 / Carta)</li>
                                 <li><strong>Serial:</strong> Z6UPBAAC300124K</li>
                                 <li><strong>Tóner:</strong> MLT-D101S</li>
-                                <li><strong>Conexión:</strong> Wi-Fi 802.11b/g/n + USB 2.0 de alta velocidad</li>
+                                <li><strong>Conexión:</strong> Wi-Fi 802.11b/g/n + USB 2.0</li>
                                 <li><strong>Precio:</strong> $780.000 COP</li>
                             </ul>
-                            <button class="btn btn-primary w-100 btn-add" 
+                            <button class="btn btn-primary w-100 boton-agregar-carrito" 
                                 onclick="agregarAlCarrito('Samsung SCX-3405W', 780000, 'Impresora')">
                                 Añadir al Carrito
                             </button>
@@ -297,13 +284,11 @@
     </main>
 
     <footer>
-        <p><strong>Creado por:</strong> Andres Felipe Estupiñan Romero  y Johan Alejandro Pabon Ojeda </p>
+        <p><strong>Creadores</strong> <br> Andres Felipe Estupiñan Romero y Johan Alejandro Pabon Ojeda</p>
         <p>Proyecto Prueba de sitio web - Instituto Cenis de Colombia 2026</p>
-                <p>TECNICO LABORAL EN SISTEMAS</p>
-          
+        <p>TECNICO LABORAL EN SISTEMAS</p>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
- 
