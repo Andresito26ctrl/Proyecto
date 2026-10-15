@@ -38,7 +38,7 @@ body {
 
 .nav-link {
     font-size: 18px;
-    color: #000000 !important;
+    color: #faf5f5 !important;
     text-decoration: none;
     padding: 10px 15px;
     border-radius: 5px;
@@ -51,10 +51,10 @@ body {
 }
 
 .boton-ver-carrito {
-    background-color: #fbca37;
-    color: #000000 !important;
+    background-color: #d19d01;
+    color: #f8f3f3 !important;
     font-weight: bold;
-    border: 2px solid #b28900;
+    border: 2px solid #d19d01;
 }
 
 .menu-desplegable-contenedor {
